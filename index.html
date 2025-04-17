@@ -1,166 +1,152 @@
-<!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Movies Library</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-</head>
-
-<body>
-  <!-- Navbar Section -->
-  <nav>
-    <div class="logo">
-      <img src="./assets/img/Logo.webp" alt="Hyder Cinemas Logo">
-    </div>
-    <h2>Hyder Cinemas</h2>
-  </nav>
-
-  <!-- Header Section -->
-  <header>
-    <h1>Movies Library</h1>
-    <div class="tabs">
-      <button id="now-showing-btn" class="active">Now Showing</button>
-    </div>
-  </header>
-
-  <!-- Main Movie Section -->
-  <main id="movies-container" class="movies-container">
-    <!-- Movie Cards for Now Showing -->
-    <div class="movie-card now-showing">
-      <img src="/assets/img/movie1.jpg" alt="Tharunam-Tamil" class="movie-img">
-      <h2>THARUNAM-TAMIL</h2>
-      <p>TAMIL</p>
-      <button class="watch-trailer-btn" data-trailer-url="https://www.youtube.com/embed/0MUkiOvnRaI?si=jlLHY-4ABa9Indke">Watch Trailer</button>
-      <button class="book-now-btn">Book Now</button>
-    </div>
-    <div class="movie-card now-showing">
-      <img src="images/movie2.jpg" alt="2D Tamil Mufasa The Lion King" class="movie-img">
-      <h2>MUFASA THE LION KING</h2>
-      <p>TAMIL</p>
-      <button class="watch-trailer-btn" data-trailer-url="https://www.youtube.com/embed/aow3If0roo0?si=axWNqJ8Bcqs6lSLO">Watch Trailer</button>
-      <button class="book-now-btn">Book Now</button>
-    </div>
-    <div class="movie-card now-showing">
-      <img src="images/movie3.jpg" alt="Madraskaaran-Tamil" class="movie-img">
-      <h2>MADRASKAARAN-TAMIL</h2>
-      <p>TAMIL</p>
-      <button class="watch-trailer-btn" data-trailer-url="https://www.youtube.com/embed/l7n7o6UXxi8?si=5bBfQJCKGF-q-Vt2">Watch Trailer</button>
-      <button class="book-now-btn">Book Now</button>
-    </div>
-    <div class="movie-card now-showing">
-      <img src="images/movie4.jpg" alt="Daaku Maharaaj-Telugu" class="movie-img">
-      <h2>DAAKU MAHARAJ-TELUGU</h2>
-      <p>TELUGU</p>
-      <button class="watch-trailer-btn" data-trailer-url="https://www.youtube.com/embed/fNDRSver0uM?si=ZscUKxinR3mNMNtp">Watch Trailer</button>
-      <button class="book-now-btn">Book Now</button>
-    </div>
-    <div class="movie-card now-showing">
-      <img src="images/movie5.jpg" alt="Game Changer-Tamil, Telugu" class="movie-img">
-      <h2>GAME CHANGER</h2>
-      <p>TAMIL, TELUGU</p>
-      <button class="watch-trailer-btn" data-trailer-url="https://www.youtube.com/embed/CXBLDC2WGbk">Watch Trailer</button>
-      <button class="book-now-btn">Book Now</button>
-    </div>
-    <div class="movie-card now-showing">
-      <img src="images/movie6.jpg" alt="Vanangaan-Tamil" class="movie-img">
-      <h2>VANANGAAN</h2>
-      <p>TAMIL</p>
-      <button class="watch-trailer-btn" data-trailer-url="https://www.youtube.com/embed/Qh36JHw8auo?si=kQi--_mgLy764gO9">Watch Trailer</button>
-      <button class="book-now-btn">Book Now</button>
-    </div>
-    <div class="movie-card now-showing">
-      <img src="images/movie7.jpg" alt="Marco-Tamil, Malayalam" class="movie-img">
-      <h2>MARCO</h2>
-      <p>TAMIL, MALAYALAM</p>
-      <button class="watch-trailer-btn" data-trailer-url="https://www.youtube.com/embed/Lnf8EsVGFno?si=0SWsf_xCpm0bVQoj">Watch Trailer</button>
-      <button class="book-now-btn">Book Now</button>
-    </div>
-    <div class="movie-card now-showing">
-      <img src="images/movie8.jpg" alt="Nesippaya-Tamil" class="movie-img">
-      <h2>NESIPPAYA</h2>
-      <p>TAMIL</p>
-      <button class="watch-trailer-btn" data-trailer-url="https://www.youtube.com/embed/gUELVsOhLiM?si=ZJ0liaGu4vzAOJL2">Watch Trailer</button>
-      <button class="book-now-btn">Book Now</button>
-    </div>
-    <div class="movie-card now-showing">
-      <img src="images/movies9.jpg" alt="Kadhalikka Neramillai-Tamil" class="movie-img">
-      <h2>KADHALIKKA NERAMILLAI</h2>
-      <p>TAMIL</p>
-      <button class="watch-trailer-btn" data-trailer-url="https://www.youtube.com/embed/PFRwl7FP4Lg?si=PNn0EaEDyGWNkBNI">Watch Trailer</button>
-      <button class="book-now-btn">Book Now</button>
-    </div>
-    <div class="movie-card now-showing">
-      <img src="images/movie10.jpg" alt="Rekhachithram-Malayalam" class="movie-img">
-      <h2>REKHACHITHRAM</h2>
-      <p>MALAYALAM</p>
-      <button class="watch-trailer-btn" data-trailer-url="https://www.youtube.com/embed/B19UcaxCpYo?si=SUNTagw_zh6NY_sl">Watch Trailer</button>
-      <button class="book-now-btn">Book Now</button>
-    </div>
-    <div class="movie-card now-showing">
-      <img src="images/movie11.jpg" alt="Sankranthiki Vasthunam-Telugu" class="movie-img">
-      <h2>SANKRANTHIKI VASTHUNAM</h2>
-      <p>TELUGU</p>
-      <button class="watch-trailer-btn" data-trailer-url="https://www.youtube.com/embed/wt3PSV_CWt4?si=mMIcbbE_OMGhdozw">Watch Trailer</button>
-      <button class="book-now-btn">Book Now</button>
-    </div>
-    <div class="movie-card now-showing">
-      <img src="images/movie12.jpg" alt="Pushpa-The Rule Part 2-2D Tamil" class="movie-img">
-      <h2>PUSHPA: THE RULE PART 2</h2>
-      <p>2D TAMIL</p>
-      <button class="watch-trailer-btn" data-trailer-url="https://www.youtube.com/embed/g3JUbgOHgdw?si=FwMgsf9w0wtL_ode">Watch Trailer</button>
-      <button class="book-now-btn">Book Now</button>
-      </div>
-      
-  </div>
-
-  
-  <script>
-      document.querySelector(".watch-trailer-btn").addEventListener("click", function() {
-          const trailerContainer = this.nextElementSibling;
-          if (trailerContainer.style.display === "none" || trailerContainer.style.display === "") {
-              trailerContainer.style.display = "block";
-          } else {
-              trailerContainer.style.display = "none";
-          }
-      });
-
-      document.querySelectorAll('.book-now-btn').forEach(button => {
-        button.addEventListener('click', () => {
-          window.location.href = 'https://mdmasiuddin-55.github.io/hydercinemas/Bookings/index.html';
-  });
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyder Cinemas</title>
+    <link rel="icon" href="Logo.webp" type="image/png">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    checkLoginStatus();
 });
-  </script>
-  
-  </main>
 
-  <!-- YouTube Trailer Modal -->
-  <div id="trailer-modal">
+function togglePopup() {
+    document.getElementById("popup-overlay").style.display = "block";
+    document.getElementById("login-modal").style.display = "block";
+}
+
+function closePopup() {
+    document.getElementById("popup-overlay").style.display = "none";
+    document.getElementById("login-modal").style.display = "none";
+}
+
+function showTab(tabName) {
+    document.getElementById("login-tab").style.display = tabName === 'login' ? 'block' : 'none';
+    document.getElementById("signup-tab").style.display = tabName === 'signup' ? 'block' : 'none';
+}
+
+function register() {
+    let name = document.getElementById("signup-name").value;
+    let email = document.getElementById("signup-email").value;
+    let password = document.getElementById("signup-password").value;
+
+    if (name && email && password) {
+        localStorage.setItem("user", JSON.stringify({ name, email, password }));
+        alert("Registration successful! You can now log in.");
+        showTab('login');
+    } else {
+        alert("Please fill in all fields.");
+    }
+}
+
+function login() {
+    let email = document.getElementById("login-email").value;
+    let password = document.getElementById("login-password").value;
+    let storedUser = JSON.parse(localStorage.getItem("user"));
+
+    if (storedUser && storedUser.email === email && storedUser.password === password) {
+        localStorage.setItem("loggedInUser", storedUser.name);
+        alert("Login successful!");
+        updateUI();
+        closePopup();
+    } else {
+        alert("Invalid email or password.");
+    }
+}
+
+function checkLoginStatus() {
+    let loggedInUser = localStorage.getItem("loggedInUser");
+    if (loggedInUser) {
+        updateUI();
+    }
+}
+
+function updateUI() {
+    let loggedInUser = localStorage.getItem("loggedInUser");
+    let loginButton = document.querySelector(".action");
+    
+    if (loggedInUser) {
+        loginButton.innerHTML = loggedInUser + ' | <a href="#" onclick="logout()">Logout</a>';
+    }
+}
+
+function logout() {
+    localStorage.removeItem("loggedInUser");
+    alert("Logged out successfully.");
+    location.reload();
+}
+
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Logo.webp" alt="Hyder Cinemas Logo" class="logo-img">
+            <a href="#" class="logo">Hyder Cinemas</a>
+        </div>
+        <a href="#" class="action" onclick="togglePopup()">Login</a>
+    </header>
+    <nav class="menu">
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-item">Home</a></li>
+            <li><a href="home.html" class="nav-item">Movies</a></li>
+            <li><a href="about.html" class="nav-item">About Us</a></li>
+            <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="slideshow">
+        <div class="slide active"><img src="images/kudumbasthan.jpg" alt="Slide 1"></div>
+        <div class="slide"><img src="images/marco.avif" alt="Slide 2"></div>
+        <div class="slide"><img src="images/pushpa2.jpg" alt="Slide 3"></div>
+        <div class="slide"><img src="images/Mrhk.jpg" alt="Slide 4"></div>
+        <div class="slide"><img src="images/vanangaan.avif" alt="Slide 5"></div>
+        <div class="slide"><img src="images/Kadhalikka Neramillai.avif" alt="Slide 6"></div>
+        <div class="slide"><img src="images/kanguva.jpg" alt="Slide 7"></div>
+        <div class="slide"><img src="images/good-bad-ugly-wallpaper-material-shots-v0-mzvqg44tfhbe1.jpg" alt="Slide 8"></div>
+        <div class="slide"><img src="images/retro.jpg" alt="Slide 9"></div>
+    </div>
+    <footer>
+        <div class="connect"> 
+            <h3>CONNECT WITH US</h3>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/hydercinemas/?hl=en" target="_blank"><img src="black-instagram-logo-3497.png" alt="Instagram" class="social-icon"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="20673.png" alt="Facebook" class="social-icon"></a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 Hyder Cinemas | All Rights Reserved.</p>
+    </footer>
+    <!-- Login/Signup Modal -->
+<div id="popup-overlay" style="display: none;" onclick="closePopup()"></div>
+<div id="login-modal" class="modal" style="display: none;">
     <div class="modal-content">
-      <span class="close-btn">&times;</span>
-      <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </div>
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <div class="tab-buttons">
+            <button onclick="showTab('login')">Login</button>
+            <button onclick="showTab('signup')">Sign Up</button>
+        </div>
 
-  <!-- Footer Section -->
-  <footer>
-    <div class="connect">
-      <h3>CONNECT WITH US</h3>
-      <a href="https://www.instagram.com/hydercinemas/?hl=en" target="_blank">
-        <img src="images/instagram.png" alt="Instagram Logo" class="social-icon">
-      </a>
-      <a href="https://www.facebook.com/" target="_blank">
-        <img src="images/facebook.png" alt="Facebook Logo" class="social-icon">
-      </a>
-    </div>
-    <p class="copyright">
-      &copy; 2025 Hyder Cinemas | All Rights Reserved.
-    </p>
-  </footer>
+        <div id="login-tab" class="tab active">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Enter Email" required>
+            <input type="password" id="login-password" placeholder="Enter Password" required>
+            <button onclick="login()">Login</button>
+            <p id="login-error-msg"></p>
+        </div>
 
-  <script src="./assets/js/script.js"></script>
+        <div id="signup-tab" class="tab" style="display: none;">
+            <h2>Sign Up</h2>
+            <input type="text" id="signup-name" placeholder="Enter Name" required>
+            <input type="email" id="signup-email" placeholder="Enter Email" required>
+            <input type="password" id="signup-password" placeholder="Enter Password" required>
+            <button onclick="register()">Sign Up</button>
+        </div>
+    </div>
+</div>
+
+
+    
+    <script src="script.js"></script>
 </body>
-
-</html>	
+</html>
